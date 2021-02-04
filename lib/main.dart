@@ -16,22 +16,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: MainPage(),
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.blue,
       ),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
+class MainPage extends StatelessWidget {
+  const MainPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flutter for web"),
+        title: Text("Flutter for Web"),
       ),
       body: ListView.builder(
         itemCount: 50,
