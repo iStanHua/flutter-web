@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
-
+import 'package:flutter_web/material.dart';
 
 class CounterPage extends StatefulWidget {
   CounterPage({Key key, this.title}) : super(key: key);
+
   final String title;
 
   @override
@@ -12,7 +12,7 @@ class CounterPage extends StatefulWidget {
 class _CounterPageState extends State<CounterPage> {
   int _counter = 0;
 
-  void _incrementCounter() {
+  void onIncrementCounter() {
     setState(() {
       _counter++;
     });
@@ -33,13 +33,13 @@ class _CounterPageState extends State<CounterPage> {
             ),
             new Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline,
             ),
           ],
         ),
       ),
       floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: onIncrementCounter,
         tooltip: 'Increment',
         child: new Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.

@@ -1,16 +1,12 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter_web/material.dart';
 
+
 void main() {
-  // runApp(new Text('Hello World', textDirection: TextDirection.ltr));
-  runApp(MyApp());
+  runApp(MainApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+class MainApp extends StatelessWidget {
+  const MainApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,21 +26,22 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Flutter for Web"),
-      ),
-      body: ListView.builder(
-        itemCount: 50,
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            title: Text("Item $index"),
-          );
-        },
-      ),
-      drawer: Drawer(),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {},
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            // Add one stop for each color. Stops should increase from 0 to 1
+            stops: [0.1, 0.9],
+            colors: [
+              Color(0xff570ec0),
+              Color(0xff3af2fe),
+            ],
+            // stops: [0.0, 0.1],
+          ),
+        ),
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
       ),
     );
   }
