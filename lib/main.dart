@@ -1,5 +1,6 @@
 import 'package:flutter_web/material.dart';
 
+import 'package:flutter_stan/router/router.dart';
 
 void main() {
   runApp(MainApp());
@@ -12,10 +13,13 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      initialRoute:"/",
+      // home: MainPage(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      routes:routes,
+      onGenerateRoute: onGenerateRoute,
     );
   }
 }

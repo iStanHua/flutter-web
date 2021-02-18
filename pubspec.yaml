@@ -16,6 +16,7 @@ dev_dependencies:
   pedantic: ^1.9.2
 
   http: ^0.12.2
+  shared_preferences: ^0.5.12+4
 
   flutter_web_test: any
 
